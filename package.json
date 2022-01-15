@@ -1,6 +1,6 @@
 {
   "name": "angular-cognito",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Application example built with Angular 13 with authentication using the Amazon Cognito service.",
   "author": "Rodrigo Kamada <rodrigo@kamada.com.br> (https://github.com/rodrigokamada)",
   "license": "MIT",
