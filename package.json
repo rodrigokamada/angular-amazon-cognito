@@ -1,6 +1,8 @@
 {
   "name": "angular-cognito",
   "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,7 +12,6 @@
     "test": "ng test",
     "test:headless": "ng test --watch=false --browsers=ChromeHeadless"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~13.1.2",
     "@angular/common": "~13.1.2",
