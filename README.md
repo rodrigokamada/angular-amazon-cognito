@@ -747,6 +747,48 @@ Build at: 2022-01-18T16:33:13.971Z - Hash: ce7a03498c95d4f5 - Time: 25230ms
 
 
 
+### Testing the application
+
+**1.** Let's test the application. Access the URL `http://localhost:4200/`, fill in the field *Email*, *Password* and click on the button *Sign up*.
+
+![Application - Sign up](https://res.cloudinary.com/rodrigokamada/image/upload/v1642530554/Blog/angular-cognito/application-step1.png)
+
+**2.** Check that the user was created in Amazon Cognito.
+
+![Application - User unconfirmed](https://res.cloudinary.com/rodrigokamada/image/upload/v1642532413/Blog/angular-cognito/application-step2.png)
+
+**3.** Open the email with the subject *Your verification code*  and copy the code generated, in my case, the code `308386` was generated.
+
+![Application - Your verification code](https://res.cloudinary.com/rodrigokamada/image/upload/v1642539595/Blog/angular-cognito/application-step3.png)
+
+**4.** Fill in the field *Code* with the code copied and click on the button *Confirm*.
+
+![Application - Confirm code](https://res.cloudinary.com/rodrigokamada/image/upload/v1642539853/Blog/angular-cognito/application-step4.png)
+
+**5.** Check that the user was confirmed in Amazon Cognito.
+
+![Application - User confirmed](https://res.cloudinary.com/rodrigokamada/image/upload/v1642540005/Blog/angular-cognito/application-step5.png)
+
+**6.** Fill in the field *Email*, *Password* and click on the button *Sign in*.
+
+![Application - Sign in](https://res.cloudinary.com/rodrigokamada/image/upload/v1642540122/Blog/angular-cognito/application-step6.png)
+
+**7.** Fill in the field *Name* and click on the button *Update*.
+
+![Application - Update user](https://res.cloudinary.com/rodrigokamada/image/upload/v1642540298/Blog/angular-cognito/application-step7.png)
+
+**8.** Click on the user linkd created in Amazon Cognito.
+
+![Application - Users](https://res.cloudinary.com/rodrigokamada/image/upload/v1642540443/Blog/angular-cognito/application-step8.png)
+
+**9.** Check that the user name was updated in Amazon Cognito.
+
+![Application - User updated](https://res.cloudinary.com/rodrigokamada/image/upload/v1642540632/Blog/angular-cognito/application-step9.png)
+
+**10.** Ready! We test the user sign in, sign up and update.
+
+
+
 ## Cloning the application
 
 **1.** Clone the repository.
