@@ -2,7 +2,7 @@
 
 Application example built with [Angular](https://angular.io/) 13 with authentication using the [Amazon Cognito](https://aws.amazon.com/cognito/) service.
 
-This tutorial was posted on my [blog](https://rodrigo.kamada.com.br/blog/autenticacao-usando-o-amazon-cognito-em-uma-aplicacao-angular) in portuguese and on the [DEV Community]() in english.
+This tutorial was posted on my [blog](https://rodrigo.kamada.com.br/blog/autenticacao-usando-o-amazon-cognito-em-uma-aplicacao-angular) in portuguese and on the [DEV Community](https://dev.to/rodrigokamada/authentication-using-the-amazon-cognito-to-an-angular-application-ilh) in english.
 
 
 [![Website](https://shields.braskam.com/v1/shields?name=website&format=rectangle&size=small&radius=5)](https://rodrigo.kamada.com.br)
