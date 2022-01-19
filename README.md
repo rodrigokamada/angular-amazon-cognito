@@ -777,7 +777,7 @@ Build at: 2022-01-18T16:33:13.971Z - Hash: ce7a03498c95d4f5 - Time: 25230ms
 
 ![Application - Update user](https://res.cloudinary.com/rodrigokamada/image/upload/v1642540298/Blog/angular-cognito/application-step7.png)
 
-**8.** Click on the user linkd created in Amazon Cognito.
+**8.** Click on the user link created in Amazon Cognito.
 
 ![Application - Users](https://res.cloudinary.com/rodrigokamada/image/upload/v1642540443/Blog/angular-cognito/application-step8.png)
 
