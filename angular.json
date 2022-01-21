@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-cognito": {
+    "angular-amazon-cognito": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-cognito",
+            "outputPath": "dist/angular-amazon-cognito",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -76,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-cognito:build:production"
+              "browserTarget": "angular-amazon-cognito:build:production"
             },
             "development": {
-              "browserTarget": "angular-cognito:build:development"
+              "browserTarget": "angular-amazon-cognito:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-cognito:build"
+            "browserTarget": "angular-amazon-cognito:build"
           }
         },
         "test": {
@@ -111,5 +111,5 @@
       }
     }
   },
-  "defaultProject": "angular-cognito"
+  "defaultProject": "angular-amazon-cognito"
 }

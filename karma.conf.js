@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/angular-cognito'),
+      dir: require('path').join(__dirname, './coverage/angular-amazon-cognito'),
       subdir: '.',
       reporters: [
         { type: 'html' },

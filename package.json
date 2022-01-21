@@ -1,5 +1,5 @@
 {
-  "name": "angular-cognito",
+  "name": "angular-amazon-cognito",
   "version": "1.0.0",
   "description": "Application example built with Angular 13 with authentication using the Amazon Cognito service.",
   "author": "Rodrigo Kamada <rodrigo@kamada.com.br> (https://github.com/rodrigokamada)",
@@ -9,7 +9,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production --base-href https://rodrigokamada.github.io/angular-cognito/",
+    "build:prod": "ng build --configuration production --base-href https://rodrigokamada.github.io/angular-amazon-cognito/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:headless": "ng test --watch=false --browsers=ChromeHeadless"
