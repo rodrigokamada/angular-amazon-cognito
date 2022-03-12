@@ -262,8 +262,21 @@ export class CognitoService {
     });
   }
 
-  public isAuthenticated(): boolean {
-    return this.authenticationSubject.value;
+  public isAuthenticated(): Promise<boolean> {
+    if (this.authenticationSubject.value) {
+      return Promise.resolve(true);
+    } else {
+      return this.getUser()
+      .then((user: any) => {
+        if (user) {
+          return true;
+        } else {
+          return false;
+        }
+      }).catch(() => {
+        return false;
+      });
+    }
   }
 
   public getUser(): Promise<any> {
@@ -564,7 +577,7 @@ export class ProfileComponent implements OnInit {
 **17.** Change the `src/app/app.component.ts` file. Import the `Router` and `CognitoService` services and create the `isAuthenticated` and `signOut` methods as below.
 
 ```typescript
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { CognitoService } from './cognito.service';
@@ -574,14 +587,20 @@ import { CognitoService } from './cognito.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+  isAuthenticated: boolean;
 
   constructor(private router: Router,
               private cognitoService: CognitoService) {
+    this.isAuthenticated = false;
   }
 
-  public isAuthenticated(): boolean {
-    return this.cognitoService.isAuthenticated();
+  public ngOnInit(): void {
+    this.cognitoService.isAuthenticated()
+    .then((success: boolean) => {
+      this.isAuthenticated = success;
+    });
   }
 
   public signOut(): void {
@@ -608,16 +627,16 @@ export class AppComponent {
     <div id="navbarContent" class="collapse navbar-collapse">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/signUp" routerLinkActive="active" *ngIf="!isAuthenticated()">Sign up</a>
+          <a class="nav-link" routerLink="/signUp" routerLinkActive="active" *ngIf="!isAuthenticated">Sign up</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/signIn" routerLinkActive="active" *ngIf="!isAuthenticated()">Sign in</a>
+          <a class="nav-link" routerLink="/signIn" routerLinkActive="active" *ngIf="!isAuthenticated">Sign in</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/profile" routerLinkActive="active" *ngIf="isAuthenticated()">Profile</a>
+          <a class="nav-link" routerLink="/profile" routerLinkActive="active" *ngIf="isAuthenticated">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="" (click)="signOut()" *ngIf="isAuthenticated()">Sign out</a>
+          <a class="nav-link" routerLink="" (click)="signOut()" *ngIf="isAuthenticated">Sign out</a>
         </li>
       </ul>
     </div>
@@ -794,7 +813,7 @@ Build at: 2022-01-18T16:33:13.971Z - Hash: ce7a03498c95d4f5 - Time: 25230ms
 **1.** Clone the repository.
 
 ```powershell
-git clone git@github.com:rodrigokamada/angular-cognito.git
+git clone git@github.com:rodrigokamada/angular-amazon-cognito.git
 ```
 
 **2.** Install the dependencies.

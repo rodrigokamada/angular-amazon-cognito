@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { CognitoService } from './cognito.service';
@@ -8,14 +8,20 @@ import { CognitoService } from './cognito.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+  isAuthenticated: boolean;
 
   constructor(private router: Router,
               private cognitoService: CognitoService) {
+    this.isAuthenticated = false;
   }
 
-  public isAuthenticated(): boolean {
-    return this.cognitoService.isAuthenticated();
+  public ngOnInit(): void {
+    this.cognitoService.isAuthenticated()
+    .then((success: boolean) => {
+      this.isAuthenticated = success;
+    });
   }
 
   public signOut(): void {

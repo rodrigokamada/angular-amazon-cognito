@@ -52,8 +52,21 @@ export class CognitoService {
     });
   }
 
-  public isAuthenticated(): boolean {
-    return this.authenticationSubject.value;
+  public isAuthenticated(): Promise<boolean> {
+    if (this.authenticationSubject.value) {
+      return Promise.resolve(true);
+    } else {
+      return this.getUser()
+      .then((user: any) => {
+        if (user) {
+          return true;
+        } else {
+          return false;
+        }
+      }).catch(() => {
+        return false;
+      });
+    }
   }
 
   public getUser(): Promise<any> {
