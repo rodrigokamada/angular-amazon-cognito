@@ -1,6 +1,6 @@
 # Angular Amazon Cognito
 
-Application example built with [Angular](https://angular.io/) 13 with authentication using the [Amazon Cognito](https://aws.amazon.com/cognito/) service.
+Application example built with [Angular](https://angular.io/) 14 with authentication using the [Amazon Cognito](https://aws.amazon.com/cognito/) service.
 
 This tutorial was posted on my [blog](https://rodrigo.kamada.com.br/blog/autenticacao-usando-o-amazon-cognito-em-uma-aplicacao-angular) in portuguese and on the [DEV Community](https://dev.to/rodrigokamada/authentication-using-the-amazon-cognito-to-an-angular-application-ilh) in english.
 
@@ -760,7 +760,7 @@ Build at: 2022-01-18T16:33:13.971Z - Hash: ce7a03498c95d4f5 - Time: 25230ms
 
 * It may display some warnings when running the application. 
 
-**22.** Ready! Access the URL `http://localhost:4200/` and check if the application is working. See the application working on [GitHub Pages](https://rodrigokamada.github.io/angular-cognito/) and [Stackblitz](https://stackblitz.com/edit/angular13-cognito).
+**22.** Ready! Access the URL `http://localhost:4200/` and check if the application is working. See the application working on [GitHub Pages](https://rodrigokamada.github.io/angular-cognito/) and [Stackblitz](https://stackblitz.com/edit/angular14-cognito).
 
 ![Angular Amazon Cognito](https://res.cloudinary.com/rodrigokamada/image/upload/v1642523631/Blog/angular-cognito/angular-cognito.png)
 
