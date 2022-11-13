@@ -23,7 +23,7 @@
     "@angular/platform-browser": "^14.2.10",
     "@angular/platform-browser-dynamic": "^14.2.10",
     "@angular/router": "^14.2.10",
-    "aws-amplify": "^4.3.30",
+    "aws-amplify": "^4.3.43",
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "^1.9.1",
     "rxjs": "~7.5.6",
