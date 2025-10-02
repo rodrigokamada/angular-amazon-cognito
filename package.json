@@ -15,7 +15,6 @@
     "test:headless": "ng test --watch=false --browsers=ChromeHeadless"
   },
   "dependencies": {
-    "@angular/animations": "^15.0.4",
     "@angular/common": "^15.0.4",
     "@angular/compiler": "^15.0.4",
     "@angular/core": "^15.0.4",
